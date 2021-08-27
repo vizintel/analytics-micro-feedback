@@ -17,6 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { CardComponent } from './card/card.component';
+import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CardComponent } from './card/card.component';
     NavigationComponent,
     DashboardComponent,
     CardComponent,
+    BarChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,6 @@ import { CardComponent } from './card/card.component';
     MatMenuModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
