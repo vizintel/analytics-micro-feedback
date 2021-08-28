@@ -6,7 +6,7 @@
     "start": "ng serve",
     "//": "build: ng build",
     "build:gh-pages": "ng build --base-href /analytics-micro-feedback/",
-    "build:gh-pages:stats": "ng build --base-href /analytics-micro-feedback/ --stats-json --prod",
+    "build:gh-pages:stats": "ng build --base-href /analytics-micro-feedback/ --stats-json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "stats": "webpack-bundle-analyzer docs/stats.json"
