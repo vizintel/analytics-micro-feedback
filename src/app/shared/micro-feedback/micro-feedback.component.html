@@ -1,0 +1,16 @@
+<div class="helpful-rating-wrapper">
+  <mat-divider></mat-divider>
+  <div id="question-state" [ngClass]="questionDone ? 'hide' : 'show'">
+    <fieldset class="helpful-fieldset">
+      <legend>Helpful?</legend>
+      <div class="helpful-btn-grp">
+        <button mat-stroked-button title="Insight helped me" (click)="handleYes()">Yes</button>
+        <button mat-stroked-button title="Not helpful" (click)="handleNo()">No</button>
+      </div>
+    </fieldset>
+  </div>
+
+  <div [ngClass]="questionDone ? 'show' : 'hide'">
+    <app-feedback-form [yes]="yes"></app-feedback-form>
+  </div>
+</div>

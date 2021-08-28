@@ -1,0 +1,35 @@
+<div class="feedback-form-wrapper">
+  <mat-divider></mat-divider>
+
+  <div [ngClass]="!ngForm.submitted ? 'show' : 'hide'">
+    <p class="thanks-text">{{ acknowledge }}</p>
+    <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ label }}</mat-label>
+        <textarea
+          class="text-area"
+          matInput
+          #message
+          maxlength="256"
+          [placeholder]="placeholder"
+          formControlName="textArea"
+        ></textarea>
+        <mat-hint align="start">Don't include personal information</mat-hint>
+        <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+      </mat-form-field>
+      <button
+        class="submit-btn"
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!feedbackForm.valid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <div [ngClass]="!ngForm.submitted ? 'hide' : 'show'">
+    <p class="center thanks-text mat-body-strong">Thanks for your feedback.</p>
+  </div>
+</div>

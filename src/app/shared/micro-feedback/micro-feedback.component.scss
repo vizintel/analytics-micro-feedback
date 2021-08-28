@@ -1,0 +1,21 @@
+.helpful-fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helpful-rating-wrapper legend {
+  float: left;
+  margin-right: 10px;
+  // padding: 5px 0;
+}
+
+.helpful-btn-grp {
+  // display: inline-block; // keeps buttons together side by side
+}
+
+.helpful-btn-grp button {
+  margin: 2px 5px 2px 0;
+  font-size: 12px;
+}

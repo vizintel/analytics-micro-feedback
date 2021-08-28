@@ -18,6 +18,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { CardComponent } from './shared/card/card.component';
 import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
+import { CardHelpfulComponent } from './shared/card-helpful/card-helpful.component';
+import { MicroFeedbackComponent } from './shared/micro-feedback/micro-feedback.component';
+import { FeedbackFormComponent } from './shared/feedback-form/feedback-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
     DashboardComponent,
     CardComponent,
     BarChartComponent,
+    CardHelpfulComponent,
+    MicroFeedbackComponent,
+    FeedbackFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +48,7 @@ import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+
+.card-content {
+  // max-height: 100%;
+  overflow: auto;
+
+  // container properties
+  // display: flex;
+  // flex-direction: column;
+  // align-items: stretch;
+  // justify-content: center;
+
+  // items properties
+  flex-grow: 1;
+}
+
+.card-footer {
+}

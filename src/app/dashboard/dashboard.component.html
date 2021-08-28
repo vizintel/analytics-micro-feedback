@@ -19,9 +19,12 @@
       [colspan]="(cardLayout | async)?.chart.cols"
       [rowspan]="(cardLayout | async)?.chart.rows"
     >
-      <app-card title="Card {{ i }}" subtitle="subtitle">
+      <!-- <app-card title="Card {{ i }}" subtitle="subtitle">
         <app-bar-chart></app-bar-chart>
-      </app-card>
+      </app-card> -->
+      <app-card-helpful>
+        <app-bar-chart></app-bar-chart>
+      </app-card-helpful>
     </mat-grid-tile>
 
     <!-- Table -->
