@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { select } from 'd3';
+import { scaleLinear, select } from 'd3';
 
 @Component({
   selector: 'app-bar-chart',
@@ -10,6 +10,7 @@ import { select } from 'd3';
 export class BarChartComponent implements OnInit {
   @ViewChild('barChart') private chartContainer!: ElementRef;
   @Input() private data?: Array<any>;
+  private colors: any;
 
   seedData = [31, 64, 42, 28, 16, 32, 64, 10];
 
@@ -24,8 +25,11 @@ export class BarChartComponent implements OnInit {
       .attr('viewBox', '0 0 200 100')
       .attr('preserveAspectRatio', 'xMinYMin meet');
 
-    const bars = svg.append('g').attr('class', 'bars');
+    this.colors = scaleLinear()
+      .domain([0, this.seedData.length])
+      .range(<any[]>['red', 'blue']);
 
+    const bars = svg.append('g').attr('class', 'bars');
     bars
       .selectAll('rect')
       .data(this.data ? this.data : this.seedData)
@@ -34,6 +38,7 @@ export class BarChartComponent implements OnInit {
       .attr('x', (d: any, i: any) => i * 25)
       .attr('y', (d: any) => 100 - d)
       .attr('width', 20)
-      .attr('height', (d: any) => d);
+      .attr('height', (d: any) => d)
+      .attr('fill', (d, i) => this.colors(i));
   }
 }

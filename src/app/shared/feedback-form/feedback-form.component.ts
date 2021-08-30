@@ -13,7 +13,7 @@ export class FeedbackFormComponent implements OnInit {
   placeholder: string = '';
 
   feedbackForm = new FormGroup({
-    textArea: new FormControl('', Validators.maxLength(250)),
+    textArea: new FormControl('', Validators.maxLength(256)),
   });
 
   constructor() {}
