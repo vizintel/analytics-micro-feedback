@@ -11,9 +11,10 @@ export class FeedbackFormComponent implements OnInit {
   acknowledge: string = '';
   label: string = '';
   placeholder: string = '';
+  maxLength: number = 256;
 
   feedbackForm = new FormGroup({
-    textArea: new FormControl('', Validators.maxLength(256)),
+    textArea: new FormControl('', Validators.maxLength(this.maxLength)),
   });
 
   constructor() {}
