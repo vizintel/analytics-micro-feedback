@@ -22,6 +22,7 @@ import { CardHelpfulComponent } from './shared/card-helpful/card-helpful.compone
 import { MicroFeedbackComponent } from './shared/micro-feedback/micro-feedback.component';
 import { FeedbackFormComponent } from './shared/feedback-form/feedback-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LineChartComponent } from './shared/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardHelpfulComponent,
     MicroFeedbackComponent,
     FeedbackFormComponent,
+    LineChartComponent,
   ],
   imports: [
     BrowserModule,
